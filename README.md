@@ -65,18 +65,18 @@ curl -X POST http://localhost:80/api/encode_url \
   -H "Content-Type: application/json" \
   -d '{"original_url": "https://atarim.io"}'
 ```
-- After hitting enter, your should get a JSON response that looks like the following:
+- After hitting enter, you should get a JSON response that looks like the following:
 ```JSON
 {"data":{"id":34,"original_url":"https:\/\/atarim.io","short_url":"l2DIgo"}}
 ```
 #### Decode URL Endpoint
 - In your terminal, run the following:
-  - Where `EXISTING_SHORT_URL` refers to the `short_url` of an existing `Url` record. You can create one either in the UI, or via the API
+  - `EXISTING_SHORT_URL` refers to the `short_url` of an existing `Url` record. You can create one either in the UI, or via the API
 ```bash
 curl -X GET http://localhost:80/api/decode_url/{EXISTING_SHORT_URL} \
   -H "Authorization: Bearer {API_TOKEN}"
 ```
-- After hitting enter, your should get a JSON response that looks like the following:
+- After hitting enter, you should get a JSON response that looks like the following:
 ```JSON
 {"decoded_url": "https:\/\/atarim.io"}
 ```
