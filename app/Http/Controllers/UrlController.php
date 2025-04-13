@@ -61,7 +61,7 @@ class UrlController extends Controller
         $url->short_url = Str::random(6);
         $url->save();
 
-        return redirect()->route('url.redirectToUrl', $url->short_url);
+        return redirect()->route('url.index');
     }
 
     // Redirect to the original URL
