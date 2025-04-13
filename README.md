@@ -42,7 +42,7 @@ instructions here: https://docs.docker.com/get-started/get-docker/.
         "original_url": "https://atarim.io",
         "short_url": "ssGwV5"
     }
-  }
+}
 ```
 #### Decode URL Endpoint
 - Add a new request called `Decode URL`
@@ -56,11 +56,12 @@ instructions here: https://docs.docker.com/get-started/get-docker/.
 }
 ```
 ### Curl
+Update {API_TOKEN} with the value of `API_TOKEN` in your .env
 #### Encode URL Endpoint
 - In your terminal, run the following:
 ```bash
 curl -X POST http://localhost:80/api/encode_url \
-  -H "Authorization: Bearer API_TOKEN" \
+  -H "Authorization: Bearer {API_TOKEN}" \
   -H "Content-Type: application/json" \
   -d '{"original_url": "https://atarim.io"}'
 ```
@@ -73,7 +74,7 @@ curl -X POST http://localhost:80/api/encode_url \
   - Where `EXISTING_SHORT_URL` refers to the `short_url` of an existing `Url` record. You can create one either in the UI, or via the API
 ```bash
 curl -X GET http://localhost:80/api/decode_url/{EXISTING_SHORT_URL} \
-  -H "Authorization: Bearer API_TOKEN"
+  -H "Authorization: Bearer {API_TOKEN}"
 ```
 - After hitting enter, your should get a JSON response that looks like the following:
 ```JSON
