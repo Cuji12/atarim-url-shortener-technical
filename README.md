@@ -71,7 +71,7 @@ curl -X POST http://localhost:80/api/encode_url \
 ```
 #### Decode URL Endpoint
 - In your terminal, run the following:
-  - `EXISTING_SHORT_URL` refers to the `short_url` of an existing `Url` record. You can create one either in the UI, or via the API
+  - `{EXISTING_SHORT_URL}` refers to the `short_url` of an existing `Url` record. You can create one either in the UI, or via the API
 ```bash
 curl -X GET http://localhost:80/api/decode_url/{EXISTING_SHORT_URL} \
   -H "Authorization: Bearer {API_TOKEN}"
